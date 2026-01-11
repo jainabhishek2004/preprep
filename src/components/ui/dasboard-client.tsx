@@ -5,9 +5,12 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import DashboardServer from "@/components/ui/dasboard-server";
 
+
 export default function DashboardPage() {
   useEffect(() => {
     fetch("/api/sync-user", { method: "POST" });
+
+   
   }, []);
 
   const router = useRouter();
